@@ -16,7 +16,10 @@ const DashboardPage = async () => {
             Logged-in user {session?.user?.email}
           </h1>
           <Image
-            src={session?.user?.image as string}
+            src={
+              session?.user?.image ||
+              "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
+            }
             width={100}
             height={100}
             alt="user image"
